@@ -1,20 +1,51 @@
 import React from 'react';
 import './ProjectCard.css';
 
-const ProjectCard = ({ title, category, description, image, link }) => {
+const ProjectCard = ({ title, category, summary, problem, approach, impact, live, repo }) => {
     return (
         <div className="project-card-container">
-            <a href={link} className="project-card" target="_blank" rel="noopener noreferrer">
+            <div className="project-card">
                 <div className="project-image">
-                    <div className="img-placeholder-rect"></div> {/* Placeholder */}
+                    <div className="img-placeholder-rect"></div>
                 </div>
                 <div className="project-content">
                     <span className="project-category">{category}</span>
                     <h3 className="project-title">{title}</h3>
-                    <p className="project-description">{description}</p>
-                    <span className="project-link">View Case Study &rarr;</span>
+                    <p className="project-summary">{summary}</p>
+                    <ul className="project-highlights">
+                        {problem && (
+                            <li>
+                                <span className="highlight-label">Problem</span>
+                                <span>{problem}</span>
+                            </li>
+                        )}
+                        {approach && (
+                            <li>
+                                <span className="highlight-label">Approach</span>
+                                <span>{approach}</span>
+                            </li>
+                        )}
+                        {impact && (
+                            <li>
+                                <span className="highlight-label">Impact</span>
+                                <span>{impact}</span>
+                            </li>
+                        )}
+                    </ul>
+                    <div className="project-links">
+                        {live && (
+                            <a href={live} target="_blank" rel="noopener noreferrer" className="project-link">
+                                Live / Demo
+                            </a>
+                        )}
+                        {repo && (
+                            <a href={repo} target="_blank" rel="noopener noreferrer" className="project-link">
+                                Code
+                            </a>
+                        )}
+                    </div>
                 </div>
-            </a>
+            </div>
         </div>
     );
 };

@@ -4,6 +4,8 @@ import Section from '../layout/Section';
 import './About.css';
 
 const About = () => {
+    const portraitSrc = `${import.meta.env.BASE_URL}Me.jpeg`;
+
     return (
         <Section id="about" background="light">
             <div className="about-grid">
@@ -14,7 +16,7 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    <img src="/Me.jpeg" alt="Portrait of me" style={{ width: '100%', borderRadius: 'var(--radius-md)', display: 'block' }} />
+                    <img src={portraitSrc} alt="Portrait of me" style={{ width: '100%', borderRadius: 'var(--radius-md)', display: 'block' }} />
                 </motion.div>
                 <motion.div
                     className="about-content"
@@ -25,22 +27,31 @@ const About = () => {
                 >
                     <h2>About Me</h2>
                     <p>
-                        I'm a multidisciplinary designer with a passion for creating accessible and delightful user experiences.
-                        With over 5 years of experience in the industry, I've had the privilege of working with diverse clients
-                        ranging from early-stage startups to established enterprises.
+                        I'm a data/AI engineer and full-stack developer who loves turning ambiguous problems into shipped products.
+                        I move between pipelines, APIs, and front-end work so teams can see insights faster and act with confidence.
                     </p>
                     <p>
-                        My design philosophy centers on empathy and clarity. I believe that good design should not only look beautiful
-                        but also solve real problems and make technology more inclusive.
+                        Right now I'm focused on analytics-heavy experiences, real-time dashboards, and performant web apps. Open to freelance,
+                        contract, and full-time product engineering roles.
                     </p>
-                    <ul className="skills-list">
-                        <li>UI/UX Design</li>
-                        <li>User Research</li>
-                        <li>Prototyping</li>
-                        <li>Front-end Dev</li>
-                        <li>Brand Strategy</li>
-                        <li>Accessibility</li>
-                    </ul>
+                    <div className="about-meta">
+                        <div>
+                            <h4>Core strengths</h4>
+                            <ul className="skills-list">
+                                <li>Data pipelines (Spark, Docker)</li>
+                                <li>React + Vite front-ends</li>
+                                <li>APIs and integrations</li>
+                                <li>Dashboards & storytelling</li>
+                                <li>Design systems & accessibility</li>
+                                <li>Rapid prototyping</li>
+                            </ul>
+                        </div>
+                        <div className="about-links">
+                            <p><strong>Based:</strong> Burnaby, British Columbia, Canada</p>
+                            <p><strong>Contact:</strong> <a href="mailto:riteshadluru07@gmail.com">riteshadluru07@gmail.com</a></p>
+                            <p><strong>GitHub:</strong> <a href="https://github.com/Alpha0027" target="_blank" rel="noopener noreferrer">Alpha0027</a></p>
+                        </div>
+                    </div>
                 </motion.div>
             </div>
         </Section>

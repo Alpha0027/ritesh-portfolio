@@ -14,8 +14,8 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    User Experience Designer <br />
-                    <span className="highlight">crafting intuitive</span> digital experiences.
+                    Ritesh Adluru <br />
+                    <span className="highlight">Data/AI engineer</span> & full-stack developer.
                 </motion.h1>
                 <motion.p
                     className="hero-subtitle"
@@ -23,7 +23,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 >
-                    I help brands build trust and drive growth through strategic design and storytelling.
+                    I ship analytics-heavy products end-to-end—pipelines, APIs, and front-end experiences that make complex data easy to act on.
                 </motion.p>
                 <motion.div
                     className="hero-actions"
@@ -31,8 +31,8 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 >
-                    <Button href="#work" variant="primary">View My Work</Button>
-                    <Button href="#contact" variant="secondary" className="btn-outline">Contact Me</Button>
+                    <Button href="#work" variant="primary">See projects</Button>
+                    <Button href="https://github.com/Alpha0027" variant="secondary" className="btn-outline">View GitHub</Button>
                 </motion.div>
             </div>
         </Section>
