@@ -21,9 +21,14 @@
     margin-top: 20px;
 }
 
+.about-meta h4 {
+    font-size: 1.1rem;
+}
+
 .skills-list li {
     position: relative;
     padding-left: 20px;
+    font-size: 1.05rem;
 }
 
 .skills-list li::before {
@@ -40,6 +45,10 @@
     gap: 24px;
     align-items: start;
     margin-top: 24px;
+}
+
+.about-links {
+    margin-top: 41px;
 }
 
 .about-links p {
